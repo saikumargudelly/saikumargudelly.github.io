@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.about-lead',
     '.about-body',
     '.about-links',
+    '.featured-card',
     '.skills-intro',
     '.role',
     '.cert-item',
