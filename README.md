@@ -2,7 +2,7 @@
 
 **Oracle Field Service Cloud & Siebel Techno-Functional Consultant**
 
-🌐 **Live Site**: [saikumargudelly.github.io](https://saikumargudelly.github.io)
+🌐 **Live Site**: [saikumargudelly.github.io](https://saikumargudelly.github.io/)
 
 ---
 
@@ -33,7 +33,7 @@ Techno-Functional Consultant with **4+ years** of experience across Oracle Siebe
    git push -u origin main
    ```
 3. Go to **Repository Settings → Pages → Source → Deploy from a branch → main / (root)**
-4. Your site will be live at: `https://saikumargudelly.github.io`
+4. Your site will be live at: `https://saikumargudelly.github.io/`
 
 ## ✨ Features
 
