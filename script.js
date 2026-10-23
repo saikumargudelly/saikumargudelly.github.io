@@ -172,19 +172,66 @@ function initLocalTime() {
   setInterval(update, 1000);
 }
 
-// ── ACTIVE NAV HIGHLIGHT ──
+// ── ACTIVE NAV & DOCK HIGHLIGHT ──
 const sections  = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('.nav-menu a');
+const dockLinks = document.querySelectorAll('.dock-link');
 
 const navObs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
+      const targetHash = '#' + entry.target.id;
       navLinks.forEach(a => {
-        const isCurrent = a.getAttribute('href') === '#' + entry.target.id;
-        a.classList.toggle('active', isCurrent);
+        a.classList.toggle('active', a.getAttribute('href') === targetHash);
+      });
+      dockLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === targetHash);
       });
     }
   });
-}, { rootMargin: '-40% 0px -55% 0px' });
+}, { rootMargin: '-35% 0px -55% 0px' });
 
 sections.forEach(s => navObs.observe(s));
+
+// ── THEME SWITCHER (DARK / LIGHT) ──
+function initTheme() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('portfolio-theme', next);
+      updateThemeIcon(next);
+    });
+  }
+
+  function updateThemeIcon(theme) {
+    if (!themeIcon) return;
+    if (theme === 'dark') {
+      themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>';
+    } else {
+      themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>';
+    }
+  }
+}
+
+// ── EXPERIENCE ACCORDION TOGGLE ──
+window.toggleRole = function(btn) {
+  const content = btn.nextElementSibling;
+  const isExpanded = btn.classList.toggle('expanded');
+  btn.setAttribute('aria-expanded', isExpanded);
+  if (content) {
+    content.classList.toggle('expanded', isExpanded);
+  }
+};
+
+// Initialize theme on load
+initTheme();
+
