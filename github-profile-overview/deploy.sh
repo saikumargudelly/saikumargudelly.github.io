@@ -18,7 +18,8 @@ git add README.md banner.png
 if git diff --staged --quiet; then
   echo "No changes to deploy."
 else
-  git commit -m "chore: rearrange GitHub status tiles into 2x2 grid"
+  COMMIT_MSG="${1:-feat: update profile banner}"
+  git commit -m "$COMMIT_MSG"
   git push origin main
   echo "Successfully deployed to https://github.com/saikumargudelly!"
 fi
