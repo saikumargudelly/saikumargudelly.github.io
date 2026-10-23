@@ -77,9 +77,30 @@ function initExperienceCollapsible() {
   });
 }
 
+// ── PROJECTS "SEE MORE" TOGGLE ──
+function initProjectsSeeMore() {
+  const toggleBtn = document.getElementById('projects-see-more-btn');
+  const moreContainer = document.getElementById('projects-more-container');
+  const btnText = document.getElementById('projects-see-more-text');
+
+  if (!toggleBtn || !moreContainer) return;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isExpanded = moreContainer.classList.toggle('expanded');
+    toggleBtn.classList.toggle('expanded', isExpanded);
+    toggleBtn.setAttribute('aria-expanded', isExpanded);
+    if (btnText) {
+      btnText.textContent = isExpanded ? 'See less' : 'See more';
+    }
+  });
+}
+
 // ── INITIALIZE ON DOM READY ──
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initScrollSpy();
   initExperienceCollapsible();
+  initProjectsSeeMore();
 });
+

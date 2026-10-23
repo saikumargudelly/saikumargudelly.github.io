@@ -612,6 +612,87 @@ ul {
   color: var(--text-main);
 }
 
+/* Projects Expandable Container & See More Button */
+.projects-more-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.25s ease;
+  overflow: hidden;
+}
+
+.projects-more-container.expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.projects-more-inner {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .projects-more-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.projects-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 4px;
+}
+
+.btn-see-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.btn-see-more:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.btn-see-more svg {
+  transition: transform 0.3s var(--ease);
+}
+
+.btn-see-more.expanded svg {
+  transform: rotate(180deg);
+}
+
+.btn-all-repos {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-all-repos:hover {
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+
 /* ── SKILLS SECTION (AUTHENTIC OFFICIAL ICONS + ANKIT HOVER EFFECT) ── */
 .skills-grid {
   display: grid;
