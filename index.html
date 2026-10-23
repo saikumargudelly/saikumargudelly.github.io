@@ -181,9 +181,20 @@
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-      <div class="section-title-bar">Projects</div>
+      <button class="section-title-bar section-title-toggle" id="projects-toggle" aria-expanded="true" aria-controls="projects-collapsible">
+        <div class="section-title-left">
+          <span>Projects</span>
+          <span class="section-count-badge">4</span>
+        </div>
+        <div class="section-title-right">
+          <span class="toggle-status-text">Collapse</span>
+          <svg class="toggle-chevron" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+      </button>
 
-      <div class="projects-grid">
+      <div class="collapsible-wrapper" id="projects-collapsible">
+        <div class="collapsible-inner">
+          <div class="projects-grid">
 
         <!-- Project 1: Repodar -->
         <div class="project-card">
@@ -294,6 +305,8 @@
           </div>
         </div>
 
+          </div>
+        </div>
       </div>
     </section>
 

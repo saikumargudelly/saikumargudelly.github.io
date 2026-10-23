@@ -62,8 +62,56 @@ function initScrollSpy() {
   sections.forEach(sec => observer.observe(sec));
 }
 
+// ── COLLAPSIBLE PROJECTS SECTION ──
+function initCollapsibleProjects() {
+  const toggleBtn = document.getElementById('projects-toggle');
+  const wrapper = document.getElementById('projects-collapsible');
+  const statusText = toggleBtn ? toggleBtn.querySelector('.toggle-status-text') : null;
+
+  if (!toggleBtn || !wrapper) return;
+
+  function toggle(open) {
+    const isCurrentlyCollapsed = wrapper.classList.contains('collapsed');
+    const shouldOpen = open !== undefined ? open : isCurrentlyCollapsed;
+
+    if (shouldOpen) {
+      wrapper.classList.remove('collapsed');
+      toggleBtn.classList.remove('collapsed');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      if (statusText) statusText.textContent = 'Collapse';
+    } else {
+      wrapper.classList.add('collapsed');
+      toggleBtn.classList.add('collapsed');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      if (statusText) statusText.textContent = 'Expand';
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggle();
+  });
+
+  toggleBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+
+  // If user clicks the Projects dock button while collapsed, auto-expand
+  const projectDockBtn = document.querySelector('.bottom-dock a[href="#projects"]');
+  if (projectDockBtn) {
+    projectDockBtn.addEventListener('click', () => {
+      toggle(true);
+    });
+  }
+}
+
 // ── INITIALIZE ON DOM READY ──
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initCollapsibleProjects();
   initScrollSpy();
 });
+
