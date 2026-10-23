@@ -4,22 +4,20 @@
 
 # 📊 GitHub Stats
 
-  <!-- Row 1: Overview Stats & Streak Stats -->
+  <!-- Row 1: Overview Stats & Streak Stats side-by-side -->
   <a href="https://github.com/saikumargudelly">
-    <img src="https://github-readme-stats.vercel.app/api?username=saikumargudelly&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="Saikumar's GitHub Stats" />
+    <img src="https://github-readme-stats.vercel.app/api?username=saikumargudelly&show=icons=true&hide_border=false&count_private=true&hide_rank=true&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff" alt="Saikumar's GitHub Stats" height="175" />
   </a>
+  &nbsp;
   <a href="https://github.com/saikumargudelly">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=saikumargudelly&theme=dark&hide_border=false" alt="Saikumar's GitHub Streak" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=saikumargudelly&background=0d1117&border=30363d&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakNum=58a6ff&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" alt="Saikumar's GitHub Streak" height="175" />
   </a>
 
   <br/><br/>
 
-  <!-- Row 2: Top Languages & Extended Stats -->
+  <!-- Row 2: Top Languages centered -->
   <a href="https://github.com/saikumargudelly">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saikumargudelly&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
-  </a>
-  <a href="https://github.com/saikumargudelly">
-    <img src="https://github-stats-extended.vercel.app/api?username=saikumargudelly&show=reviews%2Cdiscussions_started%2Cdiscussions_answered%2Cprs_merged%2Cprs_merged_percentage%2Cprs_commented%2Cprs_reviewed%2Cissues_commented&show_icons=true&include_all_commits=true&theme=catppuccin_mocha" alt="Extended Stats" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saikumargudelly&show=icons=true&hide_border=false&count_private=true&layout=compact&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" height="165" />
   </a>
 
 </div>
