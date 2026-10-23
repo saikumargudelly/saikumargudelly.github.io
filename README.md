@@ -2,7 +2,7 @@
 
 **Oracle Field Service Cloud & Siebel Techno-Functional Consultant**
 
-🌐 **Live Site**: [saikumar-gudelly.github.io/my-portfolio](https://saikumar-gudelly.github.io/my-portfolio)
+🌐 **Live Site**: [saikumargudelly.github.io](https://saikumargudelly.github.io)
 
 ---
 
@@ -22,18 +22,18 @@ Techno-Functional Consultant with **4+ years** of experience across Oracle Siebe
 
 ## 🚀 Deploying to GitHub Pages
 
-1. Create a repository named `my-portfolio` on GitHub
+1. Create a repository named `saikumargudelly.github.io` on GitHub
 2. Push this code:
    ```bash
    git init
    git add .
    git commit -m "Initial portfolio site"
    git branch -M main
-   git remote add origin https://github.com/saikumar-gudelly/my-portfolio.git
+   git remote add origin https://github.com/saikumargudelly/saikumargudelly.github.io.git
    git push -u origin main
    ```
 3. Go to **Repository Settings → Pages → Source → Deploy from a branch → main / (root)**
-4. Your site will be live at: `https://saikumar-gudelly.github.io/my-portfolio`
+4. Your site will be live at: `https://saikumargudelly.github.io`
 
 ## ✨ Features
 

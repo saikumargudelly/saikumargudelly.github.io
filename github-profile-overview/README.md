@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-10b981?style=flat-square&logo=googlechrome&logoColor=white)](https://saikumar-gudelly.github.io/my-portfolio)&nbsp;
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-10b981?style=flat-square&logo=googlechrome&logoColor=white)](https://saikumargudelly.github.io)&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/saikumar-gudelly)&nbsp;
 [![Email](https://img.shields.io/badge/Email-gudellysaikumar@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:gudellysaikumar@gmail.com)&nbsp;
 [![Location](https://img.shields.io/badge/Hyderabad-India-f59e0b?style=flat-square&logo=googlemaps&logoColor=white)](#)
