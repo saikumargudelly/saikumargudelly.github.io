@@ -4,8 +4,8 @@ set -e
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TMP_DIR=$(mktemp -d)
 
-# Clone the existing repo
-git clone https://github.com/saikumargudelly/saikumargudelly.git "$TMP_DIR"
+# Clone the existing repo with depth 1 for speed
+git clone --depth 1 https://github.com/saikumargudelly/saikumargudelly.git "$TMP_DIR"
 
 # Copy updated files
 cp "$DIR/README.md" "$DIR/banner.png" "$TMP_DIR/"

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./banner.png" alt="Saikumar Gudelly" width="100%" />
+<img src="./banner.png?v=2" alt="Saikumar Gudelly" width="100%" />
 
 <br/>
 
